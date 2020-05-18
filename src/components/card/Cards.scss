@@ -1,0 +1,124 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #000;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 24%;
+        margin-bottom: 50px;
+    }
+
+    .card-intro {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .card-info {
+        position: absolute;
+        bottom: 0;
+        background-color: black;
+        opacity: 0.5;
+        color: white;
+        width: 100%;
+
+        h4 {
+            margin: 10px 5px 10px;
+        }
+        
+        p {
+            margin: 10px 5px 10px;
+        }
+    }
+
+    .card-details {
+        background: #383838;
+        flex-grow: 1;
+
+        ul {
+            list-style-type: none;
+            padding: 0 5px;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            color: #808080;
+            border-bottom: 1px solid #808080;
+
+            &:last-child {
+                border-bottom: 0;
+
+            }
+
+            .col-right {
+                color: #FF6655;
+                flex:1;
+            }
+
+            .col-left {
+                flex:1
+            } 
+        }
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .cards{
+        .card {
+            width: 48%;
+    
+            .card-info {
+                h4 {
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                }
+    
+                p {
+                    font-size: 12px;
+                    margin-top: 0;
+                }
+            }
+            li{
+                width: 100%;
+    
+                .col-right {
+                    width: auto;
+                } 
+            }
+        }    
+    }
+    
+}
+
+@media only screen and (min-width: 767px) and (max-width : 1140px) {
+    .cards {
+        .card {
+            width: 32%;
+    
+            li {
+                display: inline-block;
+            }
+    
+            .card-info {
+                h4 {
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                }
+                p {
+                    font-size: 12px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }  
+}
